@@ -203,6 +203,12 @@ public:
 		a.nume = new char[strlen(aux) + 1];
 		strcpy_s(a.nume, strlen(aux) + 1, aux);
 
+		cout << "Nr ani inreg: "; in >> a.nrAniInregistrati;
+		a.kgInUltimiiAni = new double[a.nrAniInregistrati];
+		for (int i = 0; i < a.nrAniInregistrati; i++) {
+			in >> a.kgInUltimiiAni[i];
+		}
+
 		cout << "Culoare: "; in >> a.culoare;
 		cout << "Varsta: "; in >> a.varsta;
 
@@ -215,7 +221,7 @@ public:
 	}
 
 	//op==
-	bool operator==(Animal &animal) {
+	bool operator==(Animal& animal) {
 		if (this == &animal) {
 			return true;
 		}
@@ -372,7 +378,7 @@ int main() {
 	//op functie ()
 	a3(6);
 
-	cout <<"op functie () = "<< a3 << endl;
+	cout << "op functie () = " << a3 << endl;
 
 	//op cast explict
 	cout << "(int)a3=" << (int)a3 << endl;
