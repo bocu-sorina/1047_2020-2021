@@ -138,17 +138,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\POO 2020-2021\1047S11GIT\1047S11GIT\Marinar.h" />
-    <ClInclude Include="..\..\..\..\..\POO 2020-2021\1047S11GIT\1047S11GIT\Persoana.h" />
-    <ClInclude Include="..\..\..\..\..\POO 2020-2021\1047S11GIT\1047S11GIT\Programator.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\POO 2020-2021\1047S11GIT\1047S11GIT\Marinar.cpp" />
-    <ClCompile Include="..\..\..\..\..\POO 2020-2021\1047S11GIT\1047S11GIT\Persoana.cpp" />
-    <ClCompile Include="..\..\..\..\..\POO 2020-2021\1047S11GIT\1047S11GIT\Programator.cpp" />
-    <ClCompile Include="..\..\..\..\..\POO 2020-2021\1047S11GIT\1047S11GIT\Program_Principal.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
