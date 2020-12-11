@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
 
-class ExceptieCustomAnimal : exception{
+class ExceptieCustomAnimal :public exception{
 public:
-	const char* what() {
+	const char* what() const throw() {
 		return "Varsta animalului trebuie sa fie >0 si <30\n";
 	}
 };
