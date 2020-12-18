@@ -63,6 +63,7 @@
 #include "Persoana.h"
 #include "Marinar.h"
 #include "Programator.h"
+#include "Companie.h"
 
 using namespace std;
 
@@ -128,11 +129,11 @@ int main() {
 	}
 
 
-	Marinar *pm1 = new Marinar(44, "Baciu Vasile", "0767 222 212", 4300, 6000);
+	Marinar* pm1 = new Marinar(44, "Baciu Vasile", "0767 222 212", 4300, 6000);
 
 	Programator* pprog1 = new Programator(30, "Popa Alin", "0782 111 333", "Java", 10000);
-	
-	Persoana* pp1 = &p1;
+
+	Persoana* pp1 = new Persoana(24, "Baciu Vasile", "0766 444 666", 2400);
 
 	//STL
 	cout << "\nvector STL\n";
@@ -143,6 +144,7 @@ int main() {
 	vectorPersoane.push_back(pprog1);
 	for (int i = 0; i < vectorPersoane.size(); i++) {
 		cout << *vectorPersoane[i];
+		vectorPersoane[i]->calculeazaSalariuDupaMarireProcentuala(10);
 	}
 
 	//vectorPersoane.pop_back(); //sterge ultima val din vector
@@ -153,4 +155,50 @@ int main() {
 	for (iteratorVectorPersoane = vectorPersoane.begin(); iteratorVectorPersoane != vectorPersoane.end(); iteratorVectorPersoane++) {
 		cout << *(*iteratorVectorPersoane); //iteratorVectorPersoane -> pointer ce va contine adresa catre pointerul vectorPersoane[0],....
 	}
+
+
+	//lista
+	cout << "\nlista STL\n";
+	list<Persoana*> listaPersoane;
+	list<Persoana*>::iterator iteratorListaPersoane;
+
+	listaPersoane.push_back(pp1);	
+	listaPersoane.push_back(pm1);
+	listaPersoane.push_front(pprog1);
+	for (iteratorListaPersoane = listaPersoane.begin(); iteratorListaPersoane != listaPersoane.end(); iteratorListaPersoane++) {
+		cout << *(*iteratorListaPersoane);
+	}
+
+	//map
+	cout << "\nmap STL\n";
+
+	map<int, Persoana*> mapPersoane;
+	map<int, Persoana*>::iterator iteratorMapPersoane;
+
+	mapPersoane.insert(pair<int, Persoana*>(100, pm1));
+	mapPersoane.insert(pair<int, Persoana*>(200, pp1));
+	mapPersoane.insert(pair<int, Persoana*>(310, pprog1));
+
+	for (iteratorMapPersoane = mapPersoane.begin(); iteratorMapPersoane != mapPersoane.end(); iteratorMapPersoane++) {
+		cout << "La cheia: " << (*iteratorMapPersoane).first << " se afla valoarea: " << *(*iteratorMapPersoane).second;
+	}
+
+	//dimensiunea lui mapPersoane
+	cout << "dimensiunea lui mapPersoane: " << mapPersoane.size() << endl;
+	cout << "La cheia 200 se afla valoarea " << *mapPersoane.find(200)->second << endl;
+
+	//vector dinamic de pointeri
+	cout << endl;
+	Persoana** vectorDePersoane = new Persoana * [3]{ pp1,pm1,pprog1 };
+	Companie c("Rares SRL", vectorDePersoane, 3);
+	cout << c << endl;
+
+	Persoana* pp2 = new Persoana(40, "Ioana Popescu", "0783 222 555", 4000);
+	c.adaugareAngajat(pp2);
+
+	cout << c << endl;
+	for (int i = 0; i < c.nrAngajati; i++) {
+		c.angajati[i]->calculeazaSalariuDupaMarireProcentuala(20);
+	}
+	cout << c << endl;
 }

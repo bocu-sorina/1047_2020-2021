@@ -18,6 +18,23 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Companie.cpp" />
+    <ClCompile Include="Marinar.cpp" />
+    <ClCompile Include="Persoana.cpp" />
+    <ClCompile Include="Programator.cpp" />
+    <ClCompile Include="Program_Principal.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Companie.h" />
+    <ClInclude Include="InterfataCalcule.h" />
+    <ClInclude Include="Marinar.h" />
+    <ClInclude Include="Persoana.h" />
+    <ClInclude Include="Programator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwww.bin" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,19 +155,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\sem11\sem11\sem11\Marinar.cpp" />
-    <ClCompile Include="..\..\sem11\sem11\sem11\Persoana.cpp" />
-    <ClCompile Include="..\..\sem11\sem11\sem11\Programator.cpp" />
-    <ClCompile Include="..\..\sem11\sem11\sem11\Program_Principal.cpp" />
-    <ClCompile Include="Companie.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\sem11\sem11\sem11\Marinar.h" />
-    <ClInclude Include="..\..\sem11\sem11\sem11\Persoana.h" />
-    <ClInclude Include="..\..\sem11\sem11\sem11\Programator.h" />
-    <ClInclude Include="Companie.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -7,5 +7,7 @@ public:
 	int orePeMare;
 
 	Marinar(int varsta, string nume, const char* telefon, int orePeMare, double salariu);
+
+	double calculeazaSalariuDupaMarireProcentuala(double procent);
 };
 

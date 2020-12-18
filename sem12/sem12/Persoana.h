@@ -3,12 +3,9 @@
 #include<fstream>
 #include<string>
 
-using namespace std;
+#include "InterfataCalcule.h"
 
-class InterfataCalcule
-{
-	virtual double calculeazaSalariuDupaMarireProcentuala(double procent) = 0;
-};
+using namespace std;
 
 class Persoana : InterfataCalcule
 {

@@ -5,3 +5,9 @@ Programator::Programator(int varsta, string nume, const char* telefon, string li
 {
 	this->limbajProgramare = limbajProgramare;
 }
+
+double Programator::calculeazaSalariuDupaMarireProcentuala(double procent)
+{
+	salariu += salariu * procent / 100 + 500;
+	return salariu;
+}
