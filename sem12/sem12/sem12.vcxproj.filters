@@ -27,6 +27,9 @@
     <ClCompile Include="..\..\sem11\sem11\sem11\Program_Principal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Companie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\sem11\sem11\sem11\Programator.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\sem11\sem11\sem11\Persoana.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Companie.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

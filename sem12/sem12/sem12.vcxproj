@@ -143,11 +143,13 @@
     <ClCompile Include="..\..\sem11\sem11\sem11\Persoana.cpp" />
     <ClCompile Include="..\..\sem11\sem11\sem11\Programator.cpp" />
     <ClCompile Include="..\..\sem11\sem11\sem11\Program_Principal.cpp" />
+    <ClCompile Include="Companie.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\sem11\sem11\sem11\Marinar.h" />
     <ClInclude Include="..\..\sem11\sem11\sem11\Persoana.h" />
     <ClInclude Include="..\..\sem11\sem11\sem11\Programator.h" />
+    <ClInclude Include="Companie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
